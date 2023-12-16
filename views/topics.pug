@@ -1,0 +1,94 @@
+extends base.pug
+block scripts
+  script
+      include ../static/script.js
+block style
+  style
+      include ../static/style.css
+block content
+
+    section#box
+        h1 Tech Mastery Hub
+        section#marketing 
+            .container.marketing
+                //- Three columns of text below the carousel
+                .row
+                    .col-lg-4
+                        img.bd-placeholder-img.rounded-circle.my-4.center.mx-auto(src="/static/img/temb4.jpg", alt="Data scientist",height="160",width="160")
+                        h2.fw-normal Machine Learning and AI:
+                        p Explore the world of machine learning and artificial intelligence, covering algorithms, applications, and the latest advancements.
+                        p
+                            a.btn.btn-secondary(href="/topics.pug/#marketing") View details »
+
+                    .col-lg-4
+                        img.bd-placeholder-img.rounded-circle.my-4.center.mx-auto(src="/static/img/temb6.jpg", alt="hacking img",height="160",width="160")
+                        h2.fw-normal Cybersecurity and Ethical Hacking:
+                        p Dive into the realm of cybersecurity, discussing best practices, threat analysis, and ethical hacking techniques.
+                        p
+                            a.btn.btn-secondary(href="/topics.pug/#marketing") View details »
+
+                    .col-lg-4
+                        img.bd-placeholder-img.rounded-circle.my-4.center.mx-auto(src="/static/img/temb5.jpg", alt="data science img",height="160",width="160")
+                        
+                            
+                        h2.fw-normal Data Science and Analytics:
+                        p Uncover the power of data with insights into data science methodologies, analytics tools, and real-world data-driven solutions.
+                        p
+                        
+                            a.btn.btn-secondary(href="/topics.pug/#marketing") View details »
+        
+     
+        section#feathers 
+
+            hr.featurette-divider
+
+            .row.featurette#technology
+                .col-md-7
+                    h2.featurette-heading.fw-normal.lh-1 Technology. 
+                        span.text-secondary-emphasis  It’ll blow your mind.
+                    p.lead 
+                        |Embrace the ever-evolving landscape of technology, where innovation is the heartbeat of progress. In this digital era, technology isn't just a tool; it's an intricate tapestry weaving connections, driving transformations, and shaping our future. From the relentless evolution of artificial intelligence and the Internet of Things to the dynamic world of software development, technology is the force propelling us into uncharted territories.
+
+                        |As we navigate this technological frontier, it's not merely about gadgets and algorithms; it's about the profound impact on how we live, work, and interact. It's the fusion of creativity and code, engineering marvels that redefine the boundaries of what's possible. Whether you're a seasoned tech enthusiast or a curious newcomer, this blog is your compass in the digital wilderness—a space where we decipher tech trends, demystify complex concepts, and celebrate the incredible feats of human ingenuity. Join me on this exhilarating journey through the realms of bytes and circuits, where every line of code tells a story, and every innovation shapes the world we inhabit. Welcome to the intersection of humanity and technology—where the future unfolds with each click, tap, and breakthrough. 
+                .col-md-5
+                        img(src="/static/img/temb1.jpg", alt="Technology img").bd-placeholder-img.bd-placeholder-img-lg.featurette-image.img-fluid.mx-auto
+                        title Placeholder
+                        rect(width="100%" height="100%" fill="var(--bs-secondary-bg)")
+                        text(x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em") 
+
+            hr.featurette-divider
+
+            .row.featurette#appdevelopment
+                .col-md-7.order-md-2
+                    h2.featurette-heading.fw-normal.lh-1 App development
+                        span.text-body-secondary "App Mastery: Your Gateway to Crafting Digital Marvels"
+                    p.lead Embark on a transformative journey into the realm of app development with our tailored courses designed to guide you from novice to master. We understand that mastering app development requires more than just theory—it demands hands-on experience, real-world projects, and a community of like-minded learners. Our courses immerse you in the art and science of app creation, providing a roadmap from the basics to advanced techniques. Through a dynamic blend of comprehensive tutorials, practical exercises, and interactive projects, you'll not only grasp the intricacies of app development but also cultivate the confidence to build your own applications.
+
+                    |Our teaching approach is rooted in simplicity, ensuring that even complex concepts are conveyed in a manner that's accessible and enjoyable. Your learning journey is not solitary; it's a collaborative venture where our expert instructors and a vibrant community stand as pillars of support. We believe in empowering you to not just understand app development but to master it. By the end of our course, you'll not only have a profound understanding of app development principles but also a portfolio of projects that showcase your newfound expertise. Join us in this exciting adventure, where each line of code you write is a step closer to app mastery.
+                .col-md-5.order-md-1
+                        img(src="/static/img/temb2.jpg", alt="App img").bd-placeholder-img.bd-placeholder-img-lg.featurette-image.img-fluid.mx-auto
+                        title Placeholder
+                        rect(width="100%" height="100%" fill="var(--bs-secondary-bg)")
+                        text(x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em") 
+
+            hr.featurette-divider
+
+            .row.featurette#webdevleopment
+                .col-md-7
+                    h2.featurette-heading.fw-normal.lh-1 Web development
+                        span.text-body-secondary "Web Wonders: Crafting Your Digital Universe"
+                             
+                    p.lead|Embark on a dynamic journey through the intricate landscape of web development with our comprehensive courses that cater to learners of all levels. Starting from the basics of HTML, CSS, and JavaScript, our roadmap unfolds progressively, introducing advanced concepts like front-end and back-end frameworks, database management, and responsive design.
+
+                    |Our teaching philosophy revolves around practicality and accessibility. Complex topics are dissected into manageable modules, complemented by hands-on projects, interactive exercises, and collaborative learning. Our seasoned instructors, with years of industry experience, provide insights that extend beyond the standard curriculum, offering you a holistic understanding of the web development ecosystem.
+
+                    |This transformative learning experience isn't just about acquiring skills; it's about crafting a portfolio of real-world projects that showcase your proficiency. Join us on this exciting journey, where each line of code you write is a stride toward becoming a masterful web developer. Let's turn your coding aspirations into a reality!
+                .col-md-5
+                        img(src="/static/img/temb3.jpg", alt="web development img").bd-placeholder-img.bd-placeholder-img-lg.featurette-image.img-fluid.mx-auto
+                        title Placeholder
+                        rect(width="100%" height="100%" fill="var(--bs-secondary-bg)")
+                        text(x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em") 
+
+            //- hr.featurette-divider
+
+

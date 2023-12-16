@@ -1,0 +1,295 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+/* home Section  */
+.carousel-item img {
+    height: 70vh;
+    width: 100vw !important;
+}
+
+.carousel-item h1 {
+    font-size: 3rem;
+}
+
+.carousel-item p {
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+
+/* Blog section  */
+#blog {
+    width: 90%;
+    display: block;
+    margin: 3rem auto;
+}
+
+#blog h2 {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 4rem;
+    margin: 1rem 1rem;
+    text-align: center;
+    background-image: url("/static/img/text3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#blog col {
+    background-color: rgb(155, 149, 149);
+}
+
+#custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#custom-alert .alert-content {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#custom-alert .close-alert {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+/* About Section  */
+#AboutUs h2 {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 3.5rem;
+    margin: 1rem 1rem;
+    text-align: center;
+    background-image: url("/static/img/text3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#AboutUs h3 {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 2.2rem;
+}
+
+#AboutUs .span-text {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 1.8rem;
+}
+
+.col-md-5 img {
+    height: 500px;
+    width: 500px;
+}
+
+/* Footer Meun  */
+#footermenu {
+    background-color: black;
+    color: white;
+}
+
+#footermenu .col-6 li a {
+    color: white;
+
+}
+
+#footermenu .ms-3 img {
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+#footermenu .ms-3 img:hover {
+    scale: 0.8;
+}
+
+#footermenu .footer-imgs img {
+    width: 20px;
+    height: 26px;
+    margin: 5px 5px;
+}
+
+/* Topics section  */
+#box {
+    background-color: black;
+    color: white;
+}
+
+#box h1 {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 4rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-image: url("/static/img/text3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.featurette-heading {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 3rem;
+    margin: 1rem 1rem;
+    text-align: center;
+}
+
+.featurette-heading span {
+    font-size: 2rem !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#marketing .row {
+    margin-bottom: 4rem;
+}
+
+/* Contact Section  */
+/* Section Contact Us  */
+#contact h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+}
+
+/* #contact::before {
+    content: "";
+    background: url("/static/img/bg5.jpg") no-repeat center center/cover;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+} */
+#contact {
+    display: block;
+    background: url("/static/img/bg5.jpg") no-repeat center center/cover;
+    width: 100vw;
+    height: 100%;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+
+
+}
+
+#contact form input {
+    font-family: sans-serif;
+    width: 50vw;
+    display: block;
+    border: 2px solid black;
+    font-weight: bolder;
+    padding: 6px 10px;
+    border-radius: 10px;
+    margin: 7px 2px;
+}
+
+#contact form label {
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+#contact form textarea {
+    font-family: sans-serif;
+    display: block;
+    border: 2px solid black;
+    font-weight: bolder;
+    width: 50vw;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+#contact form button {
+    font-family: cursive;
+    display: block;
+    border: 2px solid black;
+    font-weight: bolder;
+    width: 50vw;
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    margin: 17px 2px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#contact form #button:hover {
+    color: #3b8fd4;
+    background-color: rgb(0, 0, 0);
+}
+
+@media only screen and(max-width:767px) {
+    body {
+        background-color: red;
+    }
+
+    /* home Section  */
+    .carousel-item img {
+        height: 60vh !important;
+        width: 100vw !important;
+    }
+
+    .carousel-item h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-item p {
+        font-weight: bolder;
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        background-color: red;
+    }
+
+    /* home Section  */
+    .carousel-item img {
+        height: 60vh !important;
+        width: 100vw !important;
+    }
+
+    .carousel-item h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-item p {
+        font-weight: bolder;
+        font-size: 1rem;
+    }
+
+}

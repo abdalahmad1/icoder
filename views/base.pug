@@ -1,0 +1,205 @@
+doctype html
+html
+  head 
+    title Icoder| Heaven for Coders
+    meta(charset= "UTF-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta( http-equiv= "X-UA-Compatible" content= "ie=edge")
+    meta(name= "description" content = "This is a description")
+    meta(name= "keywords" content= "icoder,icoder home page,coding,App development,web development,technology,coding blog")
+    meta(name= "robots" content= "INDEX, FOLLOW")
+    block scripts
+      script
+        include ../static/script.js
+    block style 
+      style
+        include ../static/style.css
+
+    link(href="https://fonts.googleapis.com/css2?family=Aclonica&family=Archivo+Black&family= +Sans&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+    link( href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous")
+
+  body
+    #custom-alert(style="display: none;")
+      p.alert-content
+      button.close-alert(onclick="hideCustomAlert()") ×
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+      a.navbar-brand(href='#') iCoder
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent',     aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+
+      div.collapse.navbar-collapse#navbarSupportedContent
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href='/') Home
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='/#AboutUs') About
+
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href='#', id='navbarDropdown', role='button', data-toggle='dropdown',    aria-haspopup='true', aria-expanded='false') Tech Insights Center
+            div.dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item.text-drop(href='/topics.pug/#box') Tech Mastery Hub
+              a.dropdown-item.text-drop(href='/topics.pug/#technology') Technology
+              a.dropdown-item.text-drop(href='/topics.pug/#appdevelopment') App Development
+              a.dropdown-item.text-drop(href='/topics.pug/#webdevleopment') Web Development
+              div.dropdown-divider
+              a.dropdown-item.text-drop(href='#') Support
+              a.dropdown-item.text-drop(href='#') Write for us
+          li.nav-item
+            a.nav-link(href='/contact.pug') Contact Us
+
+        form.form-inline.my-2.my-lg-0
+          input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+          button.btn.btn-outline-light.my-2.my-sm-0(type='submit') Search
+
+        div.mx-2
+            button.btn.btn-danger.login-signup-button#login(data-toggle='modal', data-target='#loginModal' href="/login?redirect=#{req.originalUrl}") Login
+            button.btn.btn-danger.mx-1#signup.login-signup-button(data-toggle='modal', data-target='#signupModal') SignUp
+            
+    section#modal 
+      //- Login Modal 
+      div.modal.fade#loginModal(tabindex="-1", aria-labelledby="loginModalLabel", aria-hidden="true")
+        div.modal-dialog
+          div.modal-content.bg-dark-subtle
+            div.modal-header
+              h1.modal-title.fs-5#loginModalLabel Login to icoder
+              button.btn-close(data-bs-dismiss="modal", aria-label="Close")
+            div.modal-body
+                form(action="/login" method="post")
+                  .row.mb-3 
+                    label.col-sm-2.col-form-label(for="inputEmail") Email
+                    .col-sm-10
+                      input.form-control(type="email", id="inputEmail" name="email")
+
+                  .row.mb-3
+                    label.col-sm-2.col-form-label(for="inputPassword") Password
+                    .col-sm-10
+                      input.form-control(type="password", id="inputPassword" name="password")
+
+
+                  .row.mb-3
+                    .col-sm-10.offset-sm-2
+                      .form-check
+                        input.form-check-input(type="checkbox", id="gridCheck")
+                        label.form-check-label(for="gridCheck") Remember Me
+
+                  button.btn.btn-dark(type="submit") Login
+
+            div.modal-footer
+              button.btn.btn-secondary(data-bs-dismiss="modal") Close
+            
+      //- Sign Up Modal        
+      div.modal.fade#signupModal(tabindex="-1",aria-labelledby="signupModalLabel",data-bs-toggle="modal",   aria-hidden="true")
+        div.modal-dialog
+          div.modal-content.bg-dark-subtle
+            div.modal-header
+              h1.modal-title.fs-5#signupModalLabel Get an Icoder Account
+              button.btn-close(data-bs-dismiss="modal", aria-label="Close")
+            div.modal-body
+              form(action="/signup" method="post")
+                .row.mb-3
+                  label.col-sm-2.col-form-label(for="name") Name
+                  .col-sm-10
+                    input.form-control(type="text", id="name" name="name")
+
+                .row.mb-3
+                  label.col-sm-2.col-form-label(for="phone") Phone No
+                  .col-sm-10
+                    input.form-control(type="text", id="phone" name="phone")
+
+                .row.mb-3
+                  label.col-sm-2.col-form-label(for="email1" ) Email
+                  .col-sm-10
+                    input.form-control(type="email", id="emial1" name="email")
+
+                .row.mb-3
+                  label.col-sm-2.col-form-label(for="inputPassword3" ) Password
+                  .col-sm-10
+                   .password-container
+                      input.form-control(type="password", id="inputPassword3", name="password")
+                      i#show-password-icon.far.fa-eye(onclick="togglePasswordVisibility()")
+
+                .row.mb-3
+                  label.col-sm-2.col-form-label(for="inputPassword4" ) Confirmm Password
+                  .col-sm-10
+                    input.form-control(type="password", id="inputPassword4" name="confirmpassword")
+
+
+                .row.mb-3
+                  .col-sm-10.offset-sm-2
+                    .form-check
+                      input.form-check-input(type="checkbox", id="gridCheck1")
+                      label.form-check-label.dark(for="gridCheck1") Cheak me out
+
+                button.btn.btn-dark(type="submit") Sign in
+
+            div.modal-footer
+              button.btn.btn-secondary(data-bs-dismiss="modal") Close
+    block content
+    block foot
+      section#footermenu
+            .d-flex.flex-column.flex-sm-row.justify-content-between.py-4.border-top
+                p © 2020 Company, Inc. All rights reserved.
+                ul.list-unstyled.d-flex
+                    li.ms-3
+                        a(href="https://www.instagram.com/itx_abdalkhan/" target="_blank")
+                            img(src="/static/img/insta.png", alt="Instagram")
+                    li.ms-3
+                        a(href="https://web.facebook.com/profile.php?id=100078376819531" target="_blank")
+                            img(src="/static/img/fb.png", alt="facebook")
+                    li.ms-3
+                        a(href="https://www.linkedin.com/in/theabdalahmad/" target="_blank") 
+                            img(src="/static/img/linkden.png", alt="Linkden")
+
+    script.
+       document.addEventListener('DOMContentLoaded', function () {
+        var isLoggedIn = #{isLoggedIn};
+        var loginAlert = '#{loginAlert}';
+
+        if (isLoggedIn && loginAlert) {
+          alert(loginAlert);
+          hideButtons();
+        }
+      });
+
+      // Function to hide login and signup buttons
+      function hideButtons() {
+        const buttons = document.getElementsByClassName('login-signup-button');
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].style.display = 'none';
+        }
+      }    
+      // Function to show custom alert
+      function showCustomAlert(message) {
+        const customAlert = document.getElementById('custom-alert');
+        const alertContent = document.querySelector('#custom-alert .alert-content');
+        alertContent.textContent = message;
+        customAlert.style.display = 'flex';
+      }
+
+      // Function to hide custom alert
+      function hideCustomAlert() {
+        const customAlert = document.getElementById('custom-alert');
+        customAlert.style.display = 'none';
+        console.log('Script is running!');
+      }
+
+    script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous")
+     script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js", integrity="...", crossorigin="anonymous")
+    //- script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js", integrity="...", crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MF2RDQOWe6FoSKG3U72uoQ7fZx3U8ymV3O2mw4C93R/0g2Llc1hqEF+ZJSVJGqJO", crossorigin="anonymous") 
+    script( src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous")   
+    script( src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"       crossorigin="anonymous")
+    script( src="https://code.jquery.com/jquery-3.6.4.min.js")
+    //- script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous")
+            

@@ -1,0 +1,161 @@
+extends base.pug
+block scripts
+  script
+      include ../static/script.js
+block style
+  style
+      include ../static/style.css
+block content
+   #myCarousel.carousel.slide.mb-6(data-bs-ride="carousel")
+      .carousel-indicators
+        button(type="button", data-bs-target="#myCarousel", data-bs-slide-to="0", aria-label="Slide 1")
+        button(type="button", data-bs-target="#myCarousel", data-bs-slide-to="1", aria-label="Slide 2")
+        button(type="button", data-bs-target="#myCarousel", data-bs-slide-to="2", aria-label="Slide 3", class="active", aria-current="true")
+      .carousel-inner
+        .carousel-item
+          img(src="./static/img/bg1.jpg", alt="background img")
+          .container
+            .carousel-caption.text-start
+              h1 Welcome to Icoder
+              p.opacity-75 Technology News, Development and Trends
+              p
+                a.btn.btn-lg.btn-danger(href="#") Sign up today
+        .carousel-item.active
+          img(src="./static/img/bg2.jpg", alt="background img")
+          .container
+            .carousel-caption
+              h1 The Best Coding Blog
+              p The Best Plateform for passionate coder
+              p
+                a.btn.btn-lg.btn-danger(href="#") Technology
+        .carousel-item
+          img(src="./static/img/bg3.jpg", alt="background img")
+          .container
+            .carousel-caption.text-end
+              h1 Award winning Blog
+              p Our Blog is consider one of the best codeing blog for coders.
+              p
+                a.btn.btn-lg.btn-danger(href="#") Web development
+      button.carousel-control-prev(type="button", data-bs-target="#myCarousel", data-bs-slide="prev")
+        span.carousel-control-prev-icon(aria-hidden="true")
+        span.visually-hidden Previous
+      button.carousel-control-next(type="button", data-bs-target="#myCarousel", data-bs-slide="next")
+        span.carousel-control-next-icon(aria-hidden="true")
+        span.visually-hidden Next
+   
+   section#blog 
+    h2 Our Blogs
+    .row.mb-2
+      .col-md-6
+        .row.no-gutters.border.rounded.overflow-hidden.flex-md-row.mb-4.shadow-sm.h-md-250.position-relative
+          .col.p-4.d-flex.flex-column.position-static.bg-secondary.bg-opacity-50
+            strong.d-inline-block.mb-2.text-primary World
+            h3.mb-0 Global Conferences
+            .mb-1.text-muted Nov 12
+            p.card-text.mb-auto The Global Coding Conference is just around the corner. It's a powerhouse of insights where coding wizards unite to share the latest trends and celebrate the world of coding. Get ready for an inspiration-packed experience!
+            a.stretched-link(href='#') Continue reading
+          .col-auto.d-none.d-lg-block
+            img.bd-placeholder-img(width='200', height='310', src='./static/img/card1.jpg', alt='Global conference img')
+      .col-md-6
+        .row.no-gutters.border.rounded.overflow-hidden.flex-md-row.mb-4.shadow-sm.h-md-250.position-relative
+          .col.p-4.d-flex.flex-column.position-static.bg-secondary.bg-opacity-50
+            strong.d-inline-block.mb-2.text-success Design
+            h3.mb-0 Learn Designing
+            .mb-1.text-muted Nov 22
+            p.mb-auto Unlock your creative potential at the Learn Designing event an immersive experience where inspiration meets artistic innovation. Elevate your design skills and join a community of visionaries shaping the visual landscape.
+            a.stretched-link(href='#') Continue reading
+          .col-auto.d-none.d-lg-block
+            img.bd-placeholder-img(width='200', height='310', src='./static/img/card2.jpg', alt='Learn Designing img')
+    .row.mb-2
+      .col-md-6
+        .row.no-gutters.border.rounded.overflow-hidden.flex-md-row.mb-4.shadow-sm.h-md-250.position-relative
+          .col.p-4.d-flex.flex-column.position-static.bg-secondary.bg-opacity-50
+            strong.d-inline-block.mb-2.text-danger FrontEnd
+            h3.mb-0 Bootstrap Templates
+            .mb-1.text-muted Nov 12
+            p.card-text.mb-auto E the world of seamless web development with Bootstrap templates—your shortcut to sleek and responsive design. Elevate your projects effortlessly with ready-to-use templates, making every website a masterpiece.
+            a.stretched-link(href='#') Continue reading
+          .col-auto.d-none.d-lg-block
+            img.bd-placeholder-img(width='200', height='300', src='/static/img/card3.jpg', alt='Bootstrap img')
+      .col-md-6
+        .row.no-gutters.border.rounded.overflow-hidden.flex-md-row.mb-4.shadow-sm.h-md-250.position-relative
+          .col.p-4.d-flex.flex-column.position-static.bg-secondary.bg-opacity-50
+            strong.d-inline-block.mb-2.text-warning Python
+            h3.mb-0 Learn Python
+            .mb-1.text-muted Nov 11
+            p.mb-auto Dive into the power of Python—a versatile coding language that simplifies complex tasks and fuels innovation. From web development to data science, Python is your gateway to a world of endless possibilities.
+            a.stretched-link(href='#') Continue reading
+          .col-auto.d-none.d-lg-block
+            img.bd-placeholder-img(width='200', height='300', src='./static/img/card4.jpg', alt='pyton img')
+
+   section#AboutUs 
+    h2 About Us
+
+    hr.featurette-divider
+
+    .row.featurette
+      .col-md-7
+        h3.featurette-heading.fw-normal.lh-1 It All started with icoder's Idea.
+          span.text-body-secondary.span-text  Icoder Stated in 2020
+        p.lead   Hello there! I'm Abdal Ahmad, a passionate full-stack web developer with a deep love for turning lines of code into impactful digital experiences. My journey in the tech world began with a fascination for problem-solving and creativity, which led me to explore the realms of HTML, CSS, JavaScript, and beyond, I've had the pleasure of contributing to diverse projects that have shaped my skills and perspective. This blog is my way of sharing the joy of coding, breaking down complex concepts into bite-sized tutorials, and fostering a community of fellow learners. Whether you're a seasoned developer or just embarking on your coding adventure, join me as we explore the ever-evolving world of web development together!
+      .col-md-5
+          img.bd-placeholder-img.bd-placeholder-img-lg.featurette-image.img-fluid.mx-auto(src="./static/img/bg4.jpg", alt="About us img" )
+          title Placeholder
+          rect(width="100%" height="100%" fill="var(--bs-secondary-bg)")
+          text(x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em") 
+
+    hr.featurette-divider
+
+   section#footermenu 
+    .container
+      footer.py-5
+        .row
+          .col-6.col-md-2.mb-3
+            h3 Section
+            ul.nav.flex-column
+              li.nav-item.mb-2
+                a.nav-link.p-0.my-2(href="#") Home
+              li.nav-item.mb-2
+                a.nav-link.p-0.my-2(href="/topics.pug/#box'") Topics
+              li.nav-item.mb-2
+                a.nav-link.p-0.my-2(href="/#AboutUs") About Us
+              li.nav-item.mb-2
+                a.nav-link.p-0.my-2(href="#") FAQs
+              li.nav-item.mb-2.my-2
+                a.nav-link.p-0(href="/contact.pug") About
+
+          .col-6.col-md-4.mb-3
+            h3 Get in touch with
+            ul.nav.flex-column
+              p Get in touch with us thorugh Phone and Email 
+                dev.footer-content
+                    dev.footer-img 
+                    h5 Address
+                    dev.footer-imgs
+                        img(src="/static/img/location.png", alt="location png")
+                        |: Gulabad Mera Charsadda,KPK
+                dev.footer-content
+                    dev.footer-img 
+                    h5 Phone
+                    dev.footer-imgs
+                        img(src="/static/img/tele.png", alt="Telephone png")
+                        |: +92310-1468681
+                dev.footer-content
+                    dev.footer-img 
+                    h5 Email 
+                    dev.footer-imgs
+                        img(src="/static/img/email.png", alt="Home png")
+                        |: abdalk465@gmail.com
+
+
+          .col-md-5.offset-md-1.mb-3
+            form
+              h3 Subscribe to our newsletter
+              p Monthly digest of what's new and exciting from us.
+              .d-flex.flex-column.flex-sm-row.w-100.gap-2
+                label(for="newsletter1").visually-hidden Email address
+                input#newsletter1.form-control(placeholder="Email address", type="text")
+                button.btn.btn-danger(type="button") Subscribe
+
+
+
